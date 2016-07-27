@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gtec">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div ng-controller="gCtrl as vm1">
+        <h1><span ng-bind="vm1.name"></span> <span ng-bind="vm1.surname"></span> </h1>
+        <input ng-model="vm1.name">
+        <br>
+        <ul>
+            <li ng-repeat="l in vm1.list | orderBy:'name' | filter:vm1.name">{{l.name}}</li>
+        </ul>
+       
+    </div>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"> </script>   
+<script src="app/app.js"> </script>   
+
+</body>
+</html>
